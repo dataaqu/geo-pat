@@ -4,6 +4,10 @@ const menu = document.querySelector(".menu");
 const test = document.querySelector(".second");
 const btns = document.querySelectorAll(".btns");
 const main = document.querySelector(".main");
+const modal = document.querySelector(".modal");
+const backdrop = document.querySelector(".backdrop");
+const serviceCard = document.querySelectorAll(".service__card");
+const xbtn = document.querySelector(".bx-x");
 
 const tabs = document.querySelectorAll(".services__tab");
 const tabsContainer = document.querySelector(".services__tab-container");
@@ -29,25 +33,29 @@ menu.addEventListener("click", () => {
   test.classList.toggle("burger");
   main.classList.toggle("index");
   document.querySelector("body").classList.toggle("buger__menu-height");
+  modal.style.visibility = "hidden";
+  backdrop.style.visibility = "hidden";
 });
 
 //services section
-tabsContainer.addEventListener("click", function (e) {
-  const clicked = e.target.closest(".services__tab");
+if (tabsContainer) {
+  tabsContainer.addEventListener("click", function (e) {
+    const clicked = e.target.closest(".services__tab");
 
-  if (!clicked) return;
+    if (!clicked) return;
 
-  tabs.forEach((t) => t.classList.remove("services__tab--active"));
-  tabsContent.forEach((c) => c.classList.remove("services__content--active"));
+    tabs.forEach((t) => t.classList.remove("services__tab--active"));
+    tabsContent.forEach((c) => c.classList.remove("services__content--active"));
 
-  clicked.classList.add("services__tab--active");
+    clicked.classList.add("services__tab--active");
 
-  document
-    .querySelector(`.services__content--${clicked.dataset.tab}`)
-    .classList.add("services__content--active");
-});
+    document
+      .querySelector(`.services__content--${clicked.dataset.tab}`)
+      .classList.add("services__content--active");
+  });
+}
 
-//faq functionality
+// faq functionality
 
 faqItems.forEach((item) => {
   const faqHeader = item.querySelector(".faq__accordion-header");
@@ -74,3 +82,22 @@ const toggleItem = (item) => {
     item.classList.add("accordion-open");
   }
 };
+
+// services card functionaly
+
+serviceCard.forEach((btn) =>
+  btn.addEventListener("click", function (e) {
+    let header = this.querySelector(".card__title").textContent;
+    let text = this.querySelector(".card__decription").textContent;
+    modal.style.visibility = "visible";
+    document.querySelector(".modal__text").textContent = header;
+    document.querySelector(".modal__desc").textContent = text;
+
+    backdrop.style.visibility = "visible";
+  })
+);
+
+xbtn.addEventListener("click", function () {
+  modal.style.visibility = "hidden";
+  backdrop.style.visibility = "hidden";
+});
