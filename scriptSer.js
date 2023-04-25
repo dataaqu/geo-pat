@@ -4,6 +4,7 @@ const menu = document.querySelector(".menu");
 const test = document.querySelector(".second");
 const btns = document.querySelectorAll(".btns");
 const main = document.querySelector(".main");
+const modal = document.querySelector(".modal");
 const backdrop = document.querySelector(".backdrop");
 const serviceCard = document.querySelectorAll(".service__card");
 const xbtn = document.querySelector(".bx-x");
@@ -32,29 +33,53 @@ menu.addEventListener("click", () => {
   test.classList.toggle("burger");
   main.classList.toggle("index");
   document.querySelector("body").classList.toggle("buger__menu-height");
+  modal.style.visibility = "hidden";
   backdrop.style.visibility = "hidden";
 });
 
-//services section  main
-if (tabsContainer) {
-  tabsContainer.addEventListener("click", function (e) {
-    const clicked = e.target.closest(".services__tab");
+// faq functionality
 
-    if (!clicked) return;
+faqItems.forEach((item) => {
+  const faqHeader = item.querySelector(".faq__accordion-header");
 
-    tabs.forEach((t) => t.classList.remove("services__tab--active"));
-    tabsContent.forEach((c) => c.classList.remove("services__content--active"));
+  faqHeader.addEventListener("click", () => {
+    const openItem = document.querySelector(".accordion-open");
 
-    clicked.classList.add("services__tab--active");
+    toggleItem(item);
 
-    document
-      .querySelector(`.services__content--${clicked.dataset.tab}`)
-      .classList.add("services__content--active");
+    if (openItem && openItem !== item) {
+      toggleItem(openItem);
+    }
   });
-}
+});
 
+const toggleItem = (item) => {
+  const faqContent = item.querySelector(".faq__accordion-content");
 
+  if (item.classList.contains("accordion-open")) {
+    faqContent.removeAttribute("style");
+    item.classList.remove("accordion-open");
+  } else {
+    faqContent.style.height = faqContent.scrollHeight + "px";
+    item.classList.add("accordion-open");
+  }
+};
 
+// services card functionaly
 
+serviceCard.forEach((btn) =>
+  btn.addEventListener("click", function (e) {
+    let header = this.querySelector(".card__title").textContent;
+    let text = this.querySelector(".card__decription").textContent;
+    modal.style.visibility = "visible";
+    document.querySelector(".modal__text").textContent = header;
+    document.querySelector(".modal__desc").textContent = text;
 
+    backdrop.style.visibility = "visible";
+  })
+);
 
+xbtn.addEventListener("click", function () {
+  modal.style.visibility = "hidden";
+  backdrop.style.visibility = "hidden";
+});

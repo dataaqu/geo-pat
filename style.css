@@ -215,7 +215,7 @@ a:active {
 .header__link-burger {
   color: #b4c7e6;
   font-weight: 900;
-  font-size: 2.7rem;
+  font-size: 2.4rem;
   transition: all 0.4s;
 }
 
@@ -420,7 +420,6 @@ a:active {
   color: var(--dark);
 }
 
-
 /* links */
 
 .link {
@@ -501,6 +500,156 @@ a:active {
 .logo__on {
   display: none;
 }
+
+/* about us page */
+
+.about {
+  margin: 14rem 2.5rem 3rem 2.5rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.left h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+.left p {
+  font-size: 1.5rem;
+  color: #0b1320;
+  margin-bottom: 2.5rem;
+}
+
+.rigth {
+  display: flex;
+  justify-content: center;
+}
+.img__box {
+  width: 100%;
+  border-radius: 1.5rem;
+}
+.img__box img {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 1.5rem;
+}
+
+.index {
+  z-index: -1;
+}
+
+.noclick {
+  color: #526b6d;
+  pointer-events: none;
+}
+
+/* contact page */
+
+.map {
+  width: 100%;
+  height: 60vh;
+  background-color: #526b6d;
+  background-image: url(./imgs/mapmobile.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.divider {
+  height: 90vh;
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  top: 25%;
+  max-width: 70rem;
+}
+.contact__input {
+  width: 80%;
+  background-color: #fef9e6;
+  border-bottom-right-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+}
+
+.contact__info {
+  width: 80%;
+  background-color: #192333;
+  border-top-right-radius: 1rem;
+  border-top-left-radius: 1rem;
+}
+
+.info__content {
+  padding: 2.5rem 3.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.info__content i {
+  font-size: 4rem;
+  color: var(--light);
+}
+
+.info__content p {
+  color: var(--light);
+  font-size: 1.6rem;
+  margin-left: 1.5rem;
+}
+.address,
+.tele,
+.mail {
+  display: flex;
+  align-items: center;
+}
+.office,
+.mobile {
+  text-decoration: none;
+  color: var(--light);
+  margin-left: 1rem;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem 2.5rem;
+  margin-top: 2rem;
+}
+
+label {
+  font-weight: bold;
+  font-size: 1.4rem;
+  margin-bottom: 5px;
+}
+
+input,
+textarea {
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  font-family: Arial, sans-serif;
+}
+
+button[type="submit"] {
+  background-color: var(--dark);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 12px 20px;
+  margin-top: 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background-color: var(--blue);
+}
+
 /* tablet */
 
 @media screen and (min-width: 767px) {
@@ -515,6 +664,13 @@ a:active {
   }
   .header__list {
     display: flex;
+  }
+
+  .header__link {
+    font-size: 2rem;
+  }
+  .about {
+    width: 80%;
   }
 
   .services__tab-container {
@@ -554,12 +710,57 @@ a:active {
   .header__list {
     gap: 2.5rem;
   }
+
+  .header__link {
+    font-size: 2.4rem;
+  }
   .services__tab-container {
     width: 100%;
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
   }
+
+  .map {
+    height: 70vh;
+    background-image: url(./imgs/map.jpg);
+  }
+
+  .contact {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    top: 30%;
+    max-width: 80%;
+  }
+
+
+  .divider {
+    height: 50vh;
+  }
+
+
+  .contact__input {
+    width: 80%;
+    height: 45rem;
+    background-color: #fef9e6;
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    border-bottom-left-radius: 0;
+  }
+  
+  .contact__info {
+    width: 80%;
+    height: 45rem;
+    background-color: #192333;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
 
   .services__content {
     width: 100%;
@@ -599,10 +800,16 @@ a:active {
   .header__link {
     font-size: 2.4rem;
   }
+
   .slogan h1 {
     width: 60%;
     padding: 5rem;
     font-size: 2.4rem;
+  }
+
+  /* about us page */
+  .about {
+    width: 80rem;
   }
 
   .services {
@@ -640,6 +847,39 @@ a:active {
   .logo__div {
     margin: 0 4rem 0 4rem;
   }
+
+  .header__link {
+    font-size: 2.4rem;
+    font-weight: 900;
+  }
+
+  /* about us page */
+  .about {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .left {
+    width: 60%;
+    align-items: left;
+    margin: 0 2.5rem;
+  }
+
+  .left h1 {
+    font-size: 4rem;
+  }
+  .left p {
+    font-size: 2rem;
+  }
+  .rigth {
+    width: 40%;
+    margin-right: 2.5rem;
+    margin-left: 2.5rem;
+  }
+
   .footer__content {
     padding: 5rem 7rem;
   }

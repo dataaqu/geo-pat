@@ -214,7 +214,7 @@ a:active {
 .header__link-burger {
   color: #b4c7e6;
   font-weight: 900;
-  font-size: 2.7rem;
+  font-size: 2.4rem;
   transition: all 0.4s;
 }
 
@@ -227,6 +227,10 @@ a:active {
 
 .header__item-burger {
   text-align: center;
+}
+
+.index {
+  z-index: -1;
 }
 
 /* სერვისები */
@@ -243,6 +247,7 @@ a:active {
   width: 80%;
   border-radius: 1.5rem;
   position: relative;
+ 
 }
 
 .services__page h1 {
@@ -254,24 +259,25 @@ a:active {
 
 .service__grid {
   width: 100%;
-  padding: 2.5rem;
+  padding: 1.5rem;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  gap: 2rem;
+  gap: 1rem;
 }
 
 .card__title {
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   font-weight: 900;
   color: var(--light);
   pointer-events: none;
+  margin-top: 1.5rem;
 }
 
 .service__card {
   border-radius: 1.5rem;
-  width: 15rem;
+  width: 12rem;
   height: 15rem;
   margin-left: 0.5rem;
   background-color: var(--blue);
@@ -290,12 +296,15 @@ a:active {
 }
 
 .card__content {
-  padding: 1.5rem;
+  padding: 0.5rem;
   text-align: left;
+  margin-top: 1.5rem;
+  text-align: center;
 }
 .service__card img {
   width: 4.5rem;
   pointer-events: none;
+  margin-bottom: 1.5rem;
 }
 
 .modal {
@@ -355,6 +364,7 @@ a:active {
   font-size: 3rem;
   font-weight: 900;
   color: var(--dark);
+  margin-bottom: 3.5rem;
 }
 
 .faq__accordion-item {
@@ -541,6 +551,14 @@ a:active {
     width: 95rem;
   }
 
+  .service__card {
+    width: 20rem;
+    height: 20rem;
+  }
+
+  .card__title {
+    font-size: 2.2rem;
+  }
   .footer_list {
     margin-top: 2.5rem;
   }
@@ -554,6 +572,9 @@ a:active {
     margin: 0 4rem 0 4rem;
   }
 
+  .main {
+    margin-top: 15rem;
+  }
   .footer__content {
     padding: 5rem 7rem;
   }
