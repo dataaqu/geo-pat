@@ -4,9 +4,11 @@ const menu = document.querySelector(".menu");
 const test = document.querySelector(".second");
 const btns = document.querySelectorAll(".btns");
 const main = document.querySelector(".main");
+
 const backdrop = document.querySelector(".backdrop");
 const serviceCard = document.querySelectorAll(".service__card");
 const xbtn = document.querySelector(".bx-x");
+const contact = document.querySelector(".contact");
 
 const tabs = document.querySelectorAll(".services__tab");
 const tabsContainer = document.querySelector(".services__tab-container");
@@ -31,8 +33,8 @@ menu.addEventListener("click", () => {
   menu.classList.remove("no-animation");
   test.classList.toggle("burger");
   main.classList.toggle("index");
+  contact.classList.toggle("none");
   document.querySelector("body").classList.toggle("buger__menu-height");
-  backdrop.style.visibility = "hidden";
 });
 
 //services section  main
@@ -52,9 +54,3 @@ if (tabsContainer) {
       .classList.add("services__content--active");
   });
 }
-
-
-
-
-
-

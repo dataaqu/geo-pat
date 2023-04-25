@@ -569,6 +569,11 @@ a:active {
   top: 20%;
   max-width: 70rem;
 }
+
+.none {
+  display: none;
+}
+
 .contact__input {
   width: 80%;
   background-color: #fef9e6;
@@ -650,6 +655,203 @@ button[type="submit"]:hover {
   background-color: var(--blue);
 }
 
+/* სერვისები */
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.services__page {
+  margin: 14rem 1.5rem 0rem 1.5rem;
+  text-align: center;
+  width: 80%;
+  border-radius: 1.5rem;
+  position: relative;
+}
+
+.services__page h1 {
+  font-weight: 700;
+  font-size: 3rem;
+  margin-bottom: 3rem;
+  margin-top: 3rem;
+}
+
+.service__grid {
+  width: 100%;
+  padding: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.card__title {
+  font-size: 1.6rem;
+  font-weight: 900;
+  color: var(--light);
+  pointer-events: none;
+  margin-top: 1.5rem;
+}
+
+.service__card {
+  border-radius: 1.5rem;
+  width: 12rem;
+  height: 15rem;
+  margin-left: 0.5rem;
+  background-color: var(--blue);
+  box-shadow: 15px 15px 22px -8px rgba(0, 0, 0, 0.41);
+  -webkit-box-shadow: 15px 15px 22px -8px rgba(0, 0, 0, 0.41);
+  -moz-box-shadow: 15px 15px 22px -8px rgba(0, 0, 0, 0.41);
+  cursor: pointer;
+}
+
+.card__decription {
+  display: none;
+}
+
+.service__card:active {
+  transform: translateY(1px);
+}
+
+.card__content {
+  padding: 0.5rem;
+  text-align: left;
+  margin-top: 1.5rem;
+  text-align: center;
+}
+.service__card img {
+  width: 4.5rem;
+  pointer-events: none;
+  margin-bottom: 1.5rem;
+}
+
+.modal {
+  width: 80%;
+  background-color: var(--light);
+  position: absolute;
+  left: 50%;
+  top: 40%;
+  transform: translate(-50%, -10%);
+  visibility: hidden;
+  z-index: 10;
+  border-radius: 1.5rem;
+}
+
+.modal i {
+  font-size: 4rem;
+  position: absolute;
+  top: 2%;
+  right: 2%;
+  cursor: pointer;
+}
+
+.modal__text {
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+.modal__desc {
+  font-size: 1.5rem;
+  padding: 1.5rem 2rem;
+  margin-bottom: 2rem;
+}
+.backdrop {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.6);
+  top: 0;
+  left: 0;
+  visibility: hidden;
+}
+
+/* FAQ */
+
+/* FAQ */
+.faq__content {
+  margin: 12rem 2.5rem 5rem 2.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.faq__title {
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 900;
+  color: var(--dark);
+  margin-bottom: 3.5rem;
+}
+
+.faq__accordion-item {
+  margin-top: 1.5rem;
+  border: 2px solid var(--blue);
+  border-radius: 0.5rem;
+  padding: 1rem 0.75rem;
+  background-color: var(--light);
+  min-height: 10rem;
+}
+
+.faq__accordion-header {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.faq__accordion-arrow {
+  display: inline-flex;
+  background-color: #acbbbd65;
+  padding: 0.25rem;
+  color: var(--dark);
+  border-radius: 2px;
+  font-size: 1.5rem;
+  margin-left: auto;
+  transition: 0.3s;
+}
+
+.faq__accordion-arrow i {
+  transition: 0.4s;
+}
+
+.faq__accordion-content {
+  height: 0;
+  transition: all 0.25s ease;
+  overflow: hidden;
+}
+
+.faq__accordion-description {
+  font-size: 1.4rem;
+  padding: 1.25rem 2.5rem 0 2.75rem;
+}
+
+.faq__accordion-title {
+  font-size: 1.6rem;
+  padding: 1.25rem 2.5rem 0 2.75rem;
+  font-weight: 700;
+}
+
+/*Rotate icon and add shadows*/
+.accordion-open {
+  box-shadow: 0 12px 32px hsla(228, 66%, 45%, 0.1);
+}
+
+.accordion-open {
+  box-shadow: 0 4px 4px hsla(228, 66%, 45%, 0.1);
+}
+
+.accordion-open .faq__accordion-arrow {
+  box-shadow: 0 2px 4px hsla(228, 66%, 45%, 0.1);
+}
+
+.accordion-open .faq__accordion-arrow i {
+  transform: rotate(-180deg);
+}
+
 /* tablet */
 
 @media screen and (min-width: 767px) {
@@ -672,7 +874,9 @@ button[type="submit"]:hover {
   .about {
     width: 80%;
   }
-
+  .faq__content {
+    width: 70rem;
+  }
   .services__tab-container {
     width: 80%;
     grid-column-gap: 4rem;
@@ -721,6 +925,26 @@ button[type="submit"]:hover {
     flex-wrap: wrap;
   }
 
+  .modal {
+    width: 75rem;
+  }
+  .modal__text {
+    font-size: 2.3rem;
+
+    margin-bottom: 3rem;
+  }
+
+  .modal__desc {
+    font-size: 1.8rem;
+  }
+  .faq__accordion-title {
+    font-size: 1.8rem;
+  }
+
+  .faq__accordion-description {
+    font-size: 1.6rem;
+  }
+
   .map {
     height: 70vh;
     background-image: url(./imgs/map.jpg);
@@ -734,11 +958,9 @@ button[type="submit"]:hover {
     max-width: 80%;
   }
 
-
   .divider {
     height: 50vh;
   }
-
 
   .contact__input {
     width: 80%;
@@ -748,7 +970,7 @@ button[type="submit"]:hover {
     border-bottom-right-radius: 1rem;
     border-bottom-left-radius: 0;
   }
-  
+
   .contact__info {
     width: 80%;
     height: 45rem;
@@ -760,7 +982,6 @@ button[type="submit"]:hover {
     justify-content: center;
     align-items: center;
   }
-
 
   .services__content {
     width: 100%;
@@ -812,6 +1033,18 @@ button[type="submit"]:hover {
     width: 80rem;
   }
 
+  .modal {
+    width: 95rem;
+  }
+
+  .service__card {
+    width: 20rem;
+    height: 20rem;
+  }
+
+  .card__title {
+    font-size: 2.2rem;
+  }
   .services {
     display: flex;
     justify-content: center;
@@ -853,6 +1086,9 @@ button[type="submit"]:hover {
     font-weight: 900;
   }
 
+  .main {
+    margin-top: 15rem;
+  }
   /* about us page */
   .about {
     width: 100%;
