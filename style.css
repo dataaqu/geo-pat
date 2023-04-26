@@ -340,7 +340,7 @@ a:active {
   align-items: center;
   padding: 1rem 1.25rem;
   height: 6rem;
-  border-radius: 10rem;
+  border-radius: 1rem;
   cursor: pointer;
   transition: all 0.3s;
   margin-left: 1.5rem;
