@@ -54,3 +54,24 @@ if (tabsContainer) {
       .classList.add("services__content--active");
   });
 }
+
+// our team functionality
+
+const teamCard = document.querySelectorAll(".team__card");
+const teamModal = document.querySelector(".modal");
+const teamBackdrop = document.querySelector(".modal-backdrop");
+
+teamCard.forEach((btn) =>
+  btn.addEventListener("click", function () {
+    teamModal.style.visibility = "visible";
+    teamBackdrop.style.visibility = "visible";
+
+    let text = this.querySelector(".decription").textContent;
+    document.querySelector(".modal__description").textContent = text;
+  })
+);
+
+xbtn.addEventListener("click", function () {
+  teamModal.style.visibility = "hidden";
+  teamBackdrop.style.visibility = "hidden";
+});

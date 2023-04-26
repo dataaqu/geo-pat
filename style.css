@@ -22,10 +22,32 @@ html {
   box-sizing: border-box;
 }
 
+/* scroll */
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: var(--blue);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--dark);
+
+  border-radius: 5rem;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--light);
+}
+
 body {
   font-family: "Noto Sans Georgian", sans-serif;
   width: 100%;
-  position: relative;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -431,10 +453,10 @@ a:active {
 }
 
 .link__header {
-  font-size: 2rem;
+  font-size: 2.4rem;
   color: var(--light);
   text-align: center;
-  margin-bottom: 2.5rem;
+  margin-bottom: 3.5rem;
 }
 
 .logo__div {
@@ -497,10 +519,6 @@ a:active {
   margin-bottom: 1rem;
 }
 
-.logo__on {
-  display: none;
-}
-
 /* about us page */
 
 .about {
@@ -546,6 +564,114 @@ a:active {
   pointer-events: none;
 }
 
+/* our team page */
+
+.team {
+  width: 100%;
+  margin: 15rem 2.5rem 10rem 2.5rem;
+}
+
+.team__header {
+  text-align: center;
+  font-weight: 900;
+  font-size: 3rem;
+  color: var(--dark);
+}
+
+.team__div {
+  padding: 2rem 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+  margin-top: 5rem;
+}
+
+.team__card {
+  width: 30rem;
+  height: 18rem;
+  border-radius: 2rem;
+  position: relative;
+  cursor: pointer;
+  margin-top: 5rem;
+
+  box-shadow: 13px 12px 9px -9px rgba(0, 0, 0, 0.54);
+  -webkit-box-shadow: 13px 12px 9px -9px rgba(0, 0, 0, 0.54);
+  -moz-box-shadow: 13px 12px 9px -9px rgba(0, 0, 0, 0.54);
+
+  background: linear-gradient(90deg, #4b6cb7 0%, #182848 100%);
+}
+
+.decription {
+  display: none;
+}
+
+.card__name {
+  color: var(--dark);
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  margin-top: 3rem;
+}
+
+.card__name span {
+  font-size: 1.4rem;
+  font-weight: 400;
+}
+
+.team__card:hover img {
+  transform: translateY(-1px);
+}
+
+.team__img {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  transition: transform 0.3s ease-in-out;
+}
+
+.roini {
+  width: 22rem;
+  height: 23rem;
+  left: 15%;
+}
+
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  visibility: hidden;
+}
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 80%;
+  transform: translate(-50%, -30%);
+  background-color: #fff;
+  padding: 4rem;
+  border-radius: 1.5rem;
+  visibility: hidden;
+}
+
+.modal .bx-x {
+  font-size: 3rem;
+  position: absolute;
+  right: 3%;
+  top: 3%;
+  cursor: pointer;
+}
+
+.modal__description {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
 /* contact page */
 
 .map {
@@ -566,7 +692,7 @@ a:active {
   flex-direction: column;
   align-items: center;
   position: absolute;
-  top: 20%;
+  top: 40%;
   max-width: 70rem;
 }
 
@@ -663,6 +789,7 @@ button[type="submit"]:hover {
   justify-content: center;
   width: 100%;
 }
+
 .services__page {
   margin: 14rem 1.5rem 0rem 1.5rem;
   text-align: center;
@@ -728,19 +855,19 @@ button[type="submit"]:hover {
   margin-bottom: 1.5rem;
 }
 
-.modal {
+.modal__box {
   width: 80%;
   background-color: var(--light);
-  position: absolute;
+  position: fixed;
   left: 50%;
-  top: 40%;
-  transform: translate(-50%, -10%);
+  top: 50%;
+  transform: translate(-50%, -40%);
   visibility: hidden;
   z-index: 10;
   border-radius: 1.5rem;
 }
 
-.modal i {
+.modal__box i {
   font-size: 4rem;
   position: absolute;
   top: 2%;
@@ -765,7 +892,7 @@ button[type="submit"]:hover {
   position: fixed;
   width: 100vw;
   height: 100vh;
-  background: rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.6);
   top: 0;
   left: 0;
   visibility: hidden;
@@ -874,6 +1001,16 @@ button[type="submit"]:hover {
   .about {
     width: 80%;
   }
+
+  .team__card {
+    width: 40rem;
+    height: 22rem;
+  }
+  .roini {
+    width: 30rem;
+    height: 28rem;
+  }
+
   .faq__content {
     width: 70rem;
   }
@@ -925,7 +1062,7 @@ button[type="submit"]:hover {
     flex-wrap: wrap;
   }
 
-  .modal {
+  .modal__box {
     width: 75rem;
   }
   .modal__text {
@@ -945,6 +1082,29 @@ button[type="submit"]:hover {
     font-size: 1.6rem;
   }
 
+  .card__name {
+    font-size: 2rem;
+  }
+
+  .card__name span {
+    font-size: 1.6rem;
+  }
+
+  .modal {
+    max-width: 75rem;
+  }
+  .modal .bx-x {
+    font-size: 4rem;
+  }
+
+  .modal__description {
+    font-size: 1.8rem;
+    line-height: 2.6rem;
+  }
+
+  .team__card {
+    margin-top: 8rem;
+  }
   .map {
     height: 70vh;
     background-image: url(./imgs/map.jpg);
@@ -954,12 +1114,13 @@ button[type="submit"]:hover {
     display: flex;
     flex-direction: row;
     position: absolute;
-    top: 30%;
+    top: 50%;
     max-width: 80%;
+    margin-bottom: 10rem;
   }
 
   .divider {
-    height: 50vh;
+    height: 45vh;
   }
 
   .contact__input {
@@ -997,19 +1158,6 @@ button[type="submit"]:hover {
   .footer p {
     margin-left: 3rem;
   }
-
-  .logo__on {
-    display: block;
-    position: absolute;
-    top: 10%;
-    left: 50%;
-    transform: translate(-50%, -10%);
-    mix-blend-mode: exclusion;
-  }
-
-  .logo__on img {
-    width: 40rem;
-  }
 }
 
 /* desktop */
@@ -1028,12 +1176,32 @@ button[type="submit"]:hover {
     font-size: 2.4rem;
   }
 
+  .team {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .team__div {
+    width: 80%;
+    padding: 2rem 3rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 8rem;
+    grid-row-gap: 8rem;
+    margin-top: 5rem;
+  }
+  .team__card {
+    margin-top: 5rem;
+  }
   /* about us page */
   .about {
     width: 80rem;
   }
 
-  .modal {
+  .modal__box {
     width: 95rem;
   }
 
@@ -1070,10 +1238,6 @@ button[type="submit"]:hover {
   .footer_link {
     font-size: 1.4rem;
   }
-
-  .logo__on img {
-    width: 50rem;
-  }
 }
 
 @media screen and (min-width: 1350px) {
@@ -1089,6 +1253,39 @@ button[type="submit"]:hover {
   .main {
     margin-top: 15rem;
   }
+
+  .team {
+    margin: 5rem 2.5rem 5rem 2.5rem;
+  }
+  .team__header {
+    font-size: 3.5rem;
+    margin-bottom: 4rem;
+  }
+  .team__div {
+    width: 100%;
+    margin-left: 25rem;
+  }
+
+  .team__card {
+    width: 50rem;
+    height: 30rem;
+    margin-top: 9rem;
+  }
+
+  .roini {
+    width: 40rem;
+    height: 38rem;
+    left: 10%;
+  }
+
+  .card__name {
+    font-size: 2.2rem;
+  }
+
+  .card__name span {
+    font-size: 1.8rem;
+  }
+
   /* about us page */
   .about {
     width: 100%;
