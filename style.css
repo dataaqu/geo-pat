@@ -448,29 +448,59 @@ a:active {
   background-color: var(--dark);
   opacity: 0.9;
   width: 100%;
-  padding: 5.5rem 2.5rem;
-  z-index: -10;
+
+  padding: 5rem 2.5rem;
 }
 
 .link__header {
   font-size: 2.4rem;
   color: var(--light);
   text-align: center;
-  margin-bottom: 3.5rem;
+  margin-bottom: 5.5rem;
 }
 
 .logo__div {
   width: 100%;
-  display: flex;
-  justify-content: space-evenly;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  grid-column-gap: 1.2rem;
+  grid-row-gap: 5rem;
 }
 
-.logo__div img {
-  width: 15%;
+.logo__link {
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  cursor: pointer;
+  width: 10rem;
   object-fit: contain;
   mix-blend-mode: luminosity;
   aspect-ratio: 3/2;
-  cursor: pointer;
+  height: 18rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.logo__link p {
+  font-size: 1.1rem;
+  color: var(--light);
+  font-weight: 900;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo__img {
+  width: 100%;
+  object-fit: contain;
+  mix-blend-mode: luminosity;
+  aspect-ratio: 3/2;
+}
+
+.sakpatent {
+  margin-left: 2.5rem;
 }
 
 .footer {
@@ -998,6 +1028,23 @@ button[type="submit"]:hover {
   .header__link {
     font-size: 2rem;
   }
+
+  .logo__div {
+    grid-column-gap: 1.2rem;
+    grid-row-gap: 8rem;
+  }
+  .logo__link {
+    width: 15rem;
+  }
+
+  .logo__link p {
+    font-size: 1.5rem;
+  }
+
+  .sakpatent {
+    margin-left: 4rem;
+  }
+
   .about {
     width: 80%;
   }
@@ -1055,6 +1102,7 @@ button[type="submit"]:hover {
   .header__link {
     font-size: 2.4rem;
   }
+
   .services__tab-container {
     width: 100%;
     display: flex;
@@ -1176,6 +1224,23 @@ button[type="submit"]:hover {
     font-size: 2.4rem;
   }
 
+  .logo__div {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 1.2rem;
+    grid-row-gap: 8rem;
+   
+  }
+  .logo__link {
+    width: 17rem;
+  }
+
+  .logo__link p {
+    font-size: 1.6rem;
+  }
+
+ 
+
   .team {
     display: flex;
     justify-content: center;
@@ -1241,9 +1306,26 @@ button[type="submit"]:hover {
 }
 
 @media screen and (min-width: 1350px) {
-  .logo__div {
-    margin: 0 4rem 0 4rem;
+ 
+  .link__header {
+    font-size: 2.8rem;
+    margin-bottom: 7.5rem;
   }
+
+  .logo__div {
+  
+    grid-row-gap: 12rem;
+
+  }
+  .logo__link {
+    width: 17rem;
+  }
+
+  .logo__link p {
+    font-size: 1.6rem;
+  }
+
+ 
 
   .header__link {
     font-size: 2.4rem;
