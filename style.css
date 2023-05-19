@@ -727,7 +727,7 @@ a:active {
 }
 
 .roini {
-  width: 20rem;
+  width: 18rem;
   height: 23rem;
   left: 20%;
 }
@@ -1142,9 +1142,17 @@ button[type="submit"]:hover {
     height: 22rem;
   
   }
+
+  .team__img {
+    width: 90%;
+    left: 5%;
+
+  }
+  
   .roini {
     width: 25rem;
     height: 28rem;
+    left: 20%;
   }
 
   .faq__content {
@@ -1364,9 +1372,10 @@ button[type="submit"]:hover {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
-    grid-column-gap: 8rem;
+    grid-column-gap: 15rem;
     grid-row-gap: 8rem;
     margin-top: 5rem;
+    margin: auto;
   }
   .team__card {
     margin-top: 5rem;
@@ -1402,11 +1411,6 @@ button[type="submit"]:hover {
 
   .services__header p {
     font-size: 2rem;
-  }
-
-  .team__div {
-     margin: auto;
-    }
   }
 
   .link__header,
@@ -1457,13 +1461,19 @@ button[type="submit"]:hover {
   
     margin: 5rem 2.5rem 5rem 2.5rem;
   }
+
+  .team__img {
+    width: 90%;
+    height: 40rem;
+    position: absolute;
+ 
+  }
   .team__header {
     font-size: 3.5rem;
     margin-bottom: 4rem;
   }
   .team__div {
-    width: 100%;
-    margin-left: 25rem;
+    margin-left: auto;
   }
 
   .team__card {
@@ -1474,7 +1484,7 @@ button[type="submit"]:hover {
 
   .roini {
     width: 30rem;
-    height: 38rem;
+    height: 32rem;
     left: 20%;
   }
 
