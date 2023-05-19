@@ -1,5 +1,6 @@
 
   @import url('https://fonts.googleapis.com/css2?family=Mulish:wght@500;700;900&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian:wght@500;700;900&display=swap');
 
 
 
@@ -49,7 +50,7 @@ html {
 }
 
 body {
-  font-family: 'Mulish', sans-serif;
+  font-family: 'Mulish', 'Noto Sans Georgian',sans-serif;
   width: 100%;
   display: flex;
   justify-content: space-between;
