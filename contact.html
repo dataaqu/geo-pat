@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -19,6 +21,9 @@
       integrity="sha384-T5m5WERuXcjgzF8DAb7tRkByEZQGcpraRTinjpywg37AO96WoYN9+hrhDVoM6CaT"
       crossorigin="anonymous"
     />
+
+    <link rel="stylesheet" href="/node_modules/dejavu-sans-bold/css/dejavu-sans-bold.min.css">
+
     <link rel="stylesheet" href="./style.css" />
     <title>Geo Pat • ჯეო პატი</title>
   </head>
@@ -28,21 +33,49 @@
         <a href="./index.html" class="logo"
           ><img src="/imgs/logo.png" alt="logo" class="logo"
         /></a>
+        <div class="lang__geo">
+          <ul class="header__list">
+            <li class="header__item">
+              <a href="./aboutUs.html" class="header__link">ჩვენს შესახებ</a>
+            </li>
+            <li class="header__item">
+              <a href="./team.html" class="header__link">ჩვენი გუნდი</a>
+            </li>
+            <li class="header__item">
+              <a href="./services.html" class="header__link">სერვისები</a>
+            </li>
+            <li class="header__item">
+              <a href="./contact.html" class="header__link noclick">კონტაქტი</a>
+            </li>
 
-        <ul class="header__list">
-          <li class="header__item">
-            <a href="./aboutUs.html" class="header__link">ჩვენს შესახებ</a>
-          </li>
-          <li class="header__item">
-            <a href="./team.html" class="header__link">ჩვენი გუნდი</a>
-          </li>
-          <li class="header__item">
-            <a href="./services.html" class="header__link">სერვისები</a>
-          </li>
-          <li class="header__item">
-            <a href="#" class="header__link noclick">კონტაქტი</a>
-          </li>
-        </ul>
+            <div class="langs">
+              <div class="lang__link geo active__link" onclick="changeLanguage('geo')">ქარ</div>
+              <div class="lang__link eng"onclick="changeLanguage('eng')" >ENG</div>
+            </div>
+          </ul>
+        </div>
+
+        <div class="lang__eng">
+          <ul class="header__list">
+            <li class="header__item">
+              <a href="./aboutUs.html" class="header__link">about us</a>
+            </li>
+            <li class="header__item">
+              <a href="./team.html" class="header__link">our team</a>
+            </li>
+            <li class="header__item">
+              <a href="./services.html" class="header__link">services</a>
+            </li>
+            <li class="header__item">
+              <a href="./contact.html" class="header__link noclick">contact</a>
+            </li>
+
+            <div class="langs">
+              <div class="lang__link geo"onclick="changeLanguage('geo')">ქარ</div>
+              <div class="lang__link eng active__link" onclick="changeLanguage('eng')">ENG</div>
+            </div>
+          </ul>
+        </div>
 
         <div class="menu no-animation">
           <div></div>
@@ -52,72 +85,146 @@
       </div>
     </header>
 
-    <div class="second">
-      <ul class="header__list-burger">
-        <li class="header__item-burger">
-          <a href="./aboutUs.html" class="header__link-burger">ჩვენს შესახებ</a>
-        </li>
-        <li class="header__item-burger">
-          <a href="./team.html" class="header__link-burger">ჩვენი გუნდი</a>
-        </li>
-        <li class="header__item-burger">
-          <a href="./services.html" class="header__link-burger">სერვისები</a>
-        </li>
-        <li class="header__item-burger">
-          <a href="#" class="header__link-burger noclick">კონტაქტი</a>
-        </li>
-      </ul>
+     <div class="second">
+      <div class="burger-geo">
+        <ul class="header__list-burger">
+          <li class="header__item-burger">
+            <a href="./aboutUs.html" class="header__link-burger">ჩვენს შესახებ</a>
+          </li>
+          <li class="header__item-burger">
+            <a href="./team.html" class="header__link-burger">ჩვენი გუნდი</a>
+          </li>
+          <li class="header__item-burger">
+            <a href="./services.html" class="header__link-burger">სერვისები</a>
+          </li>
+          <li class="header__item-burger">
+            <a href="./contact.html" class="header__link-burger noclick"
+              >კონტაქტი</a
+            >
+          </li>
+          <div class="langs">
+            <div class="lang__link geo active__link"onclick="changeLanguage('geo')">ქარ</div>
+            <div class="lang__link eng" onclick="changeLanguage('eng')">ENG</div>
+          </div>
+        </ul>
+      </div>
+
+      <div class="burger-eng" style="display: none">
+        <ul class="header__list-burger">
+          <li class="header__item-burger">
+            <a href="./aboutUs.html" class="header__link-burger">about us</a>
+          </li>
+          <li class="header__item-burger">
+            <a href="./team.html" class="header__link-burger">our team</a>
+          </li>
+          <li class="header__item-burger">
+            <a href="./services.html" class="header__link-burger">services</a>
+          </li>
+          <li class="header__item-burger">
+            <a href="./contact.html" class="header__link-burger noclick"
+              >contact</a
+            >
+          </li>
+          <div class="langs">
+            <div class="lang__link geo"onclick="changeLanguage('geo')">ქარ</div>
+            <div class="lang__link eng active__link" onclick="changeLanguage('eng')">ENG</div>
+          </div>
+        </ul>
+      </div>
     </div>
 
     <div class="map"></div>
 
     <div class="divider"></div>
 
-
     <div class="main">
-      
-    </div>
-    
-    <div class="contact">
-      <div class="contact__info">
-        <div class="info__content">
-          <div class="address">
-            <i class="bx bxs-map-pin"></i>
-            <p>
-              აღმაშენებლის გამზ. 154. მწვანე ოფისი, მე-8 სართული, ოფისი 3.
-              თბილისი
-            </p>
-          </div>
-          <div class="tele">
-            <i class="bx bxs-phone-call"></i>
-            <p>
-              ტელ: <a href="tel:+0322914950 " class="office">291 49 50 </a
-              ><br />
-              მობ: <a href="tel:+995595331699" class="mobile">595 33 16 99</a>
-            </p>
-          </div>
-
-          <div class="mail">
-            <i class="bx bxs-envelope"></i>
-            <p>ksovreli@geo-pat.ge</p>
+      <div class="contact ">
+        <div class="contact__info">
+          <div class="info__content">
+            <div class="address">
+              <i class="bx bxs-map-pin"></i>
+              <p>
+                აღმაშენებლის გამზ. 154. მწვანე ოფისი, მე-8 სართული, ოფისი 3.
+                თბილისი
+              </p>
+            </div>
+            <div class="tele">
+              <i class="bx bxs-phone-call"></i>
+              <p>
+                ტელ: <a href="tel:+0322914950 " class="office">291 49 50 </a
+                ><br />
+                მობ: <a href="tel:+995595331699" class="mobile">595 33 16 99</a>
+              </p>
+            </div>
+  
+            <div class="mail">
+              <i class="bx bxs-envelope"></i>
+              <p>ksovreli@geo-pat.ge</p>
+            </div>
           </div>
         </div>
+        <div class="contact__input">
+          <form action="./script/sendMail.php" method="POST">
+            <label for="name">თქვენი სახელი</label>
+            <input type="text" id="name" name="name" required />
+  
+            <label for="email">მეილი</label>
+            <input type="email" id="email" name="email"  required />
+  
+            <label for="message">ტექსტი</label>
+            <textarea id="message" name="message" required></textarea>
+  
+            <button type="submit">გაგზავნა</button>
+          </form>
+        </div>
       </div>
-      <div class="contact__input">
-        <form action="#" method="POST">
-          <label for="name">თქვენი სახელი</label>
-          <input type="text" id="name" name="name" required />
 
-          <label for="email">მეილი</label>
-          <input type="email" id="email" name="email" required />
 
-          <label for="message">ტექსტი</label>
-          <textarea id="message" name="message" required></textarea>
-
-          <button type="submit">გაგზავნა</button>
-        </form>
+      <div class="contact-eng" style="display: none;">
+        <div class="contact__info">
+          <div class="info__content">
+            <div class="address">
+              <i class="bx bxs-map-pin"></i>
+              <p>
+                Agmashenebeli Ave. 154. Green office, 8th floor, office 3.
+                Tbilisi
+              </p>
+            </div>
+            <div class="tele">
+              <i class="bx bxs-phone-call"></i>
+              <p>
+                TEL: <a href="tel:+0322914950 " class="office">291 49 50 </a
+                ><br />
+                MOB: <a href="tel:+995595331699" class="mobile">595 33 16 99</a>
+              </p>
+            </div>
+  
+            <div class="mail">
+              <i class="bx bxs-envelope"></i>
+              <p>ksovreli@geo-pat.ge</p>
+            </div>
+          </div>
+        </div>
+        <div class="contact__input">
+          <form action="./script/sendMail.php" method="POST">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="name" required />
+  
+            <label for="email">E-mail</label>
+            <input type="email" id="email" name="email" required />
+  
+            <label for="message">Text</label>
+            <textarea id="message" name="message" required></textarea>
+  
+            <button type="submit">Send</button>
+          </form>
+        </div>
       </div>
-    </div>
+  
+    </div> 
+     
+
+    
 
     <!-- footer -->
     <footer class="footer">
@@ -139,6 +246,20 @@
           </li>
         </ul>
 
+        <ul class="footer_list-eng" style="display: none">
+          <li class="footer_item">
+            <a href="./aboutUs.html" class="footer_link">about us</a>
+          </li>
+          <li class="footer_item">
+            <a href="./team.html" class="footer_link">our team</a>
+          </li>
+          <li class="footer_item">
+            <a href="./services.html" class="footer_link">services</a>
+          </li>
+          <li class="footer_item">
+            <a href="./contact.html" class="footer_link">contact</a>
+          </li>
+        </ul>
         <div class="footer__social">
           <a href="#"><i class="bx bxl-facebook-square"></i></a>
           <a href="#"><i class="bx bxl-linkedin-square"></i></a>
@@ -148,6 +269,19 @@
       <p>&copy; Geo-pat. All rights reserved.</p>
     </footer>
 
-    <script src="./script.js"></script>
+    <div class="bx-x" style="display: none"></div>
+    <div class="contact" style="display: none">
+      <div class="left-eng"></div>
+      <div class="left"></div>
+      <div class="team"></div>
+      <div class="team-eng"></div>
+      <div class="content-geo"></div>
+      <div class="content-eng"></div>
+    </div>
+
+    
+    <script src="./script/script.js"></script>
+    <script src="./script/lang.js"></script>
+
   </body>
 </html>

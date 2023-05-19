@@ -14,6 +14,8 @@
         rel="stylesheet"
       />
 
+      <link rel="stylesheet" href="/node_modules/dejavu-sans-bold/css/dejavu-sans-bold.min.css">
+
       <link rel="stylesheet" href="./style.css" />
       <title>Geo Pat • ჯეო პატი</title>
     </head>
@@ -23,21 +25,65 @@
           <a href="./index.html" class="logo"
             ><img src="/imgs/logo.png" alt="logo" class="logo"
           /></a>
+          <div class="lang__geo">
+            <ul class="header__list">
+              <li class="header__item">
+                <a href="./aboutUs.html" class="header__link">ჩვენს შესახებ</a>
+              </li>
+              <li class="header__item">
+                <a href="./team.html" class="header__link noclick"
+                  >ჩვენი გუნდი</a
+                >
+              </li>
+              <li class="header__item">
+                <a href="./services.html" class="header__link">სერვისები</a>
+              </li>
+              <li class="header__item">
+                <a href="./contact.html" class="header__link">კონტაქტი</a>
+              </li>
 
-          <ul class="header__list">
-            <li class="header__item">
-              <a href="./aboutUs.html" class="header__link">ჩვენს შესახებ</a>
-            </li>
-            <li class="header__item">
-              <a href="#" class="header__link noclick">ჩვენი გუნდი</a>
-            </li>
-            <li class="header__item">
-              <a href="./services.html" class="header__link">სერვისები</a>
-            </li>
-            <li class="header__item">
-              <a href="./contact.html" class="header__link">კონტაქტი</a>
-            </li>
-          </ul>
+              <div class="langs">
+                <div
+                  class="lang__link geo active__link"
+                  onclick="changeLanguage('geo')"
+                >
+                  ქარ
+                </div>
+                <div class="lang__link eng" onclick="changeLanguage('eng')">
+                  ENG
+                </div>
+              </div>
+            </ul>
+          </div>
+
+          <div class="lang__eng">
+            <ul class="header__list">
+              <li class="header__item">
+                <a href="./aboutUs.html" class="header__link">about us</a>
+              </li>
+              <li class="header__item">
+                <a href="./team.html" class="header__link noclick">our team</a>
+              </li>
+              <li class="header__item">
+                <a href="./services.html" class="header__link">services</a>
+              </li>
+              <li class="header__item">
+                <a href="./contact.html" class="header__link">contact</a>
+              </li>
+
+              <div class="langs">
+                <div class="lang__link geo" onclick="changeLanguage('geo')">
+                  ქარ
+                </div>
+                <div
+                  class="lang__link eng active__link"
+                  onclick="changeLanguage('eng')"
+                >
+                  ENG
+                </div>
+              </div>
+            </ul>
+          </div>
 
           <div class="menu no-animation">
             <div></div>
@@ -48,22 +94,69 @@
       </header>
 
       <div class="second">
-        <ul class="header__list-burger">
-          <li class="header__item-burger">
-            <a href="./aboutUs.html" class="header__link-burger"
-              >ჩვენს შესახებ</a
-            >
-          </li>
-          <li class="header__item-burger">
-            <a href="#" class="header__link-burger noclick">ჩვენი გუნდი</a>
-          </li>
-          <li class="header__item-burger">
-            <a href="./services.html" class="header__link-burger">სერვისები</a>
-          </li>
-          <li class="header__item-burger">
-            <a href="./contact.html" class="header__link-burger">კონტაქტი</a>
-          </li>
-        </ul>
+        <div class="burger-geo">
+          <ul class="header__list-burger">
+            <li class="header__item-burger">
+              <a href="./aboutUs.html" class="header__link-burger"
+                >ჩვენს შესახებ</a
+              >
+            </li>
+            <li class="header__item-burger">
+              <a href="./team.html" class="header__link-burger noclick"
+                >ჩვენი გუნდი</a
+              >
+            </li>
+            <li class="header__item-burger">
+              <a href="./services.html" class="header__link-burger"
+                >სერვისები</a
+              >
+            </li>
+            <li class="header__item-burger">
+              <a href="./contact.html" class="header__link-burger">კონტაქტი</a>
+            </li>
+            <div class="langs">
+              <div
+                class="lang__link geo active__link"
+                onclick="changeLanguage('geo')"
+              >
+                ქარ
+              </div>
+              <div class="lang__link eng" onclick="changeLanguage('eng')">
+                ENG
+              </div>
+            </div>
+          </ul>
+        </div>
+
+        <div class="burger-eng" style="display: none">
+          <ul class="header__list-burger">
+            <li class="header__item-burger">
+              <a href="./aboutUs.html" class="header__link-burger">about us</a>
+            </li>
+            <li class="header__item-burger">
+              <a href="./team.html" class="header__link-burger noclick"
+                >our team</a
+              >
+            </li>
+            <li class="header__item-burger">
+              <a href="./services.html" class="header__link-burger">services</a>
+            </li>
+            <li class="header__item-burger">
+              <a href="./contact.html" class="header__link-burger">contact</a>
+            </li>
+            <div class="langs">
+              <div class="lang__link geo" onclick="changeLanguage('geo')">
+                ქარ
+              </div>
+              <div
+                class="lang__link eng active__link"
+                onclick="changeLanguage('eng')"
+              >
+                ENG
+              </div>
+            </div>
+          </ul>
+        </div>
       </div>
 
       <section class="main">
@@ -161,6 +254,96 @@
           </div>
         </div>
 
+        <div class="team-eng" style="display: none">
+          <h1 class="team__header">OUR TEAM</h1>
+          <div class="team__div">
+            <div class="employee">
+              <h1 class="card__name">
+                Nugzar Ksovreli <br /><span>Partner, Director</span>
+              </h1>
+              <div class="team__card">
+                <img
+                  src="./imgs/nugzari_800x500.png"
+                  alt="nugzar qsovreli"
+                  class="team__img"
+                />
+                <p class="decription">
+                  Nugzar Ksovreli is an engineer-technologist. He has six years
+                  of experience working as a patent examiner in the Patent
+                  Office of Georgia, and has been a registered patent attorney
+                  of Georgia since 2004. Nugzar Ksovreli takes part in the
+                  preparation of applications on industrial property objects,
+                  filing and proceedings, as well as in legal disputes, mainly
+                  in disputes related to patents and trademarks. He monitors all
+                  services provided by Geo-Pat Ltd.
+                </p>
+              </div>
+            </div>
+            <div class="employee">
+              <h1 class="card__name">
+                Roin Migriauli<br /><span>Lawyer, Associate Professor</span>
+              </h1>
+              <div class="team__card">
+                <img
+                  src="./imgs/roini_1_800x600.png"
+                  alt="roin migriauli"
+                  class="team__img roini"
+                />
+
+                <p class="decription">
+                  Roin Migriauli is a lawyer and has been engaged in the
+                  Practice of Law since 1997. Roin Migriauli takes part in the
+                  development of the strategy of legal disputes related to
+                  industrial property objects and defends the interests of
+                  clients in any instance of the court of Georgia. Also, he is
+                  actively involved in the negotiations related to agreements on
+                  licensing and transfer of rights and implements the
+                  development and the process of signing the said agreements.
+                </p>
+              </div>
+            </div>
+
+            <div class="employee">
+              <h1 class="card__name">
+                David Abulashvili <br /><span>Doctor of Medicine</span>
+              </h1>
+              <div class="team__card">
+                <img
+                  src="./imgs/nugzari_800x500.png"
+                  alt="nugzar qsovreli"
+                  class="team__img dato"
+                />
+
+                <p class="decription">
+                  David Abulashvili’s work is mainly focused on patent
+                  applications, patents, patent searches and legal disputes
+                  related to inventions and utility models in the fields of
+                  medicine, pharmacology, organic chemistry and biotechnology.
+                </p>
+              </div>
+            </div>
+            <div class="employee">
+              <h1 class="card__name">
+                Zaza Kervalidze <br /><span>Partner, Physicist</span>
+              </h1>
+              <div class="team__card">
+                <img
+                  src="./imgs/nugzari_800x500.png"
+                  alt="nugzar qsovreli"
+                  class="team__img zaza"
+                />
+
+                <p class="decription">
+                  Zaza Kervalidze’s work is mainly focused on patent
+                  applications, patents, patent searches and legal disputes
+                  related to inventions and utility models in the fields of
+                  physics, mechanics and electrical engineering.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <div class="modal-backdrop"></div>
         <div class="modal">
           <i class="bx bx-x"></i>
@@ -177,7 +360,7 @@
               <a href="./aboutUs.html" class="footer_link">ჩვენს შესახებ</a>
             </li>
             <li class="footer_item">
-              <a href="#" class="footer_link">ჩვენი გუნდი</a>
+              <a href="./team.html" class="footer_link">ჩვენი გუნდი</a>
             </li>
             <li class="footer_item">
               <a href="./services.html" class="footer_link">სერვისები</a>
@@ -187,6 +370,20 @@
             </li>
           </ul>
 
+          <ul class="footer_list-eng" style="display: none">
+            <li class="footer_item">
+              <a href="./aboutUs.html" class="footer_link">about us</a>
+            </li>
+            <li class="footer_item">
+              <a href="./team.html" class="footer_link">our team</a>
+            </li>
+            <li class="footer_item">
+              <a href="./services.html" class="footer_link">services</a>
+            </li>
+            <li class="footer_item">
+              <a href="./contact.html" class="footer_link">contact</a>
+            </li>
+          </ul>
           <div class="footer__social">
             <a href="#"><i class="bx bxl-facebook-square"></i></a>
             <a href="#"><i class="bx bxl-linkedin-square"></i></a>
@@ -195,8 +392,17 @@
 
         <p>&copy; Geo-pat. All rights reserved.</p>
       </footer>
+      <div class="hidden" style="display: none">
+        <div class="contact"></div>
+        <div class="contact-eng"></div>
+        <div class="left-eng"></div>
+        <div class="left"></div>
+        <div class="content-geo"></div>
+        <div class="content-eng"></div>
+      </div>
 
-      <script src="./script.js"></script>
+      <script src="./script/lang.js"></script>
+      <script src="./script/script.js"></script>
     </body>
   </html>
 </html>

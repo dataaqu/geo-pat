@@ -4,10 +4,10 @@ const menu = document.querySelector(".menu");
 const test = document.querySelector(".second");
 const btns = document.querySelectorAll(".btns");
 const main = document.querySelector(".main");
-const modal = document.querySelector(".modal__box");
-const backdrop = document.querySelector(".backdrop");
+const modal = document.querySelectorAll(".modal__box");
+const backdrop = document.querySelectorAll(".backdrop");
 const serviceCard = document.querySelectorAll(".service__card");
-const xbtn = document.querySelector(".bx-x");
+const xbtn = document.querySelectorAll(".bx-x");
 
 const tabs = document.querySelectorAll(".services__tab");
 const tabsContainer = document.querySelector(".services__tab-container");
@@ -71,15 +71,21 @@ serviceCard.forEach((btn) =>
   btn.addEventListener("click", function (e) {
     let header = this.querySelector(".card__title").textContent;
     let text = this.querySelector(".card__decription").textContent;
-    modal.style.visibility = "visible";
-    document.querySelector(".modal__text").textContent = header;
-    document.querySelector(".modal__desc").textContent = text;
+    modal.forEach((el) => (el.style.visibility = "visible"));
+    document
+      .querySelectorAll(".modal__text")
+      .forEach((el) => (el.textContent = header));
+    document
+      .querySelectorAll(".modal__desc")
+      .forEach((el) => (el.textContent = text));
 
-    backdrop.style.visibility = "visible";
+    backdrop.forEach(el => el.style.visibility = "visible")
   })
 );
 
-xbtn.addEventListener("click", function () {
-  modal.style.visibility = "hidden";
-  backdrop.style.visibility = "hidden";
-});
+xbtn.forEach((btn) =>
+  btn.addEventListener("click", function () {
+    modal.forEach((el) => (el.style.visibility = "hidden"));
+    backdrop.forEach(el => el.style.visibility = "hidden")
+  })
+);

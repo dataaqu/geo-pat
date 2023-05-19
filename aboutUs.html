@@ -7,6 +7,9 @@
 
     <link rel="shortcut icon" href="./imgs/favicon.png" type="image/x-icon" />
 
+    <link rel="stylesheet" href="/node_modules/dejavu-sans-bold/css/dejavu-sans-bold.min.css">
+
+
     <!-- boxicons -->
     <link
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
@@ -22,21 +25,63 @@
         <a href="./index.html" class="logo"
           ><img src="/imgs/logo.png" alt="logo" class="logo"
         /></a>
+        <div class="lang__geo">
+          <ul class="header__list">
+            <li class="header__item">
+              <a href="#" class="header__link noclick">ჩვენს შესახებ</a>
+            </li>
+            <li class="header__item">
+              <a href="./team.html" class="header__link">ჩვენი გუნდი</a>
+            </li>
+            <li class="header__item">
+              <a href="./services.html" class="header__link">სერვისები</a>
+            </li>
+            <li class="header__item">
+              <a href="./contact.html" class="header__link">კონტაქტი</a>
+            </li>
 
-        <ul class="header__list">
-          <li class="header__item">
-            <a href="#" class="header__link noclick">ჩვენს შესახებ</a>
-          </li>
-          <li class="header__item">
-            <a href="./team.html" class="header__link">ჩვენი გუნდი</a>
-          </li>
-          <li class="header__item">
-            <a href="./services.html" class="header__link">სერვისები</a>
-          </li>
-          <li class="header__item">
-            <a href="./contact.html" class="header__link">კონტაქტი</a>
-          </li>
-        </ul>
+            <div class="langs">
+              <div
+                class="lang__link geo active__link"
+                onclick="changeLanguage('geo')"
+              >
+                ქარ
+              </div>
+              <div class="lang__link eng" onclick="changeLanguage('eng')">
+                ENG
+              </div>
+            </div>
+          </ul>
+        </div>
+
+        <div class="lang__eng">
+          <ul class="header__list">
+            <li class="header__item">
+              <a href="#" class="header__link noclick">about us</a>
+            </li>
+            <li class="header__item">
+              <a href="./team.html" class="header__link">our team</a>
+            </li>
+            <li class="header__item">
+              <a href="./services.html" class="header__link">services</a>
+            </li>
+            <li class="header__item">
+              <a href="./contact.html" class="header__link">contact</a>
+            </li>
+
+            <div class="langs">
+              <div class="lang__link geo" onclick="changeLanguage('geo')">
+                ქარ
+              </div>
+              <div
+                class="lang__link eng active__link"
+                onclick="changeLanguage('eng')"
+              >
+                ENG
+              </div>
+            </div>
+          </ul>
+        </div>
 
         <div class="menu no-animation">
           <div></div>
@@ -47,20 +92,61 @@
     </header>
 
     <div class="second">
-      <ul class="header__list-burger">
-        <li class="header__item-burger">
-          <a href="#" class="header__link-burger noclick">ჩვენს შესახებ</a>
-        </li>
-        <li class="header__item-burger">
-          <a href="./team.html" class="header__link-burger">ჩვენი გუნდი</a>
-        </li>
-        <li class="header__item-burger">
-          <a href="./services.html" class="header__link-burger">სერვისები</a>
-        </li>
-        <li class="header__item-burger">
-          <a href="./contact.html" class="header__link-burger">კონტაქტი</a>
-        </li>
-      </ul>
+      <div class="burger-geo">
+        <ul class="header__list-burger">
+          <li class="header__item-burger">
+            <a href="#" class="header__link-burger noclick">ჩვენს შესახებ</a>
+          </li>
+          <li class="header__item-burger">
+            <a href="./team.html" class="header__link-burger">ჩვენი გუნდი</a>
+          </li>
+          <li class="header__item-burger">
+            <a href="./services.html" class="header__link-burger">სერვისები</a>
+          </li>
+          <li class="header__item-burger">
+            <a href="./contact.html" class="header__link-burger">კონტაქტი</a>
+          </li>
+          <div class="langs">
+            <div
+              class="lang__link geo active__link"
+              onclick="changeLanguage('geo')"
+            >
+              ქარ
+            </div>
+            <div class="lang__link eng" onclick="changeLanguage('eng')">
+              ENG
+            </div>
+          </div>
+        </ul>
+      </div>
+
+      <div class="burger-eng" style="display: none">
+        <ul class="header__list-burger">
+          <li class="header__item-burger">
+            <a href="#" class="header__link-burger noclick">about us</a>
+          </li>
+          <li class="header__item-burger">
+            <a href="./team.html" class="header__link-burger">our team</a>
+          </li>
+          <li class="header__item-burger">
+            <a href="./services.html" class="header__link-burger">services</a>
+          </li>
+          <li class="header__item-burger">
+            <a href="./contact.html" class="header__link-burger">contact</a>
+          </li>
+          <div class="langs">
+            <div class="lang__link geo" onclick="changeLanguage('geo')">
+              ქარ
+            </div>
+            <div
+              class="lang__link eng active__link"
+              onclick="changeLanguage('eng')"
+            >
+              ENG
+            </div>
+          </div>
+        </ul>
+      </div>
     </div>
 
     <section class="main">
@@ -100,6 +186,39 @@
           </p>
         </div>
 
+        <div class="left-eng" style="display: none">
+          <h1>about us</h1>
+          <p>
+            Geo-Pat Ltd was founded in April, 2006. It is headed by the
+            registered patent attorney of Georgia, Nugzar Ksovreli, who worked
+            as a patent examiner in the Invention Department of the Patent
+            Office of Georgia for six years, and has been a patent attorney
+            since April 2004. <br />
+            <br />
+            Geo-Pat Ltd provides services which are quite diverse and include
+            the full spectrum related to intellectual property. <br />
+            <br />
+            People who cooperate with Geo-Pat Ltd are specialists, lawyers,
+            people with medical education, pharmacists, biologists, engineers,
+            chemists and physicists with experience working as patent experts,
+            trademark and design experts, whose high qualification ensure a high
+            quality of service and, accordingly, maximum protection of the
+            client’s interests in any field of intellectual property. <br />
+            <br />
+            With the help of Geo-Pat Ltd many local and foreign persons obtained
+            rights to various objects of industrial property (invention,
+            trademark, design) in Georgia. The company also provides services to
+            individuals and legal entities, residents of Georgia, to get patents
+            on inventions and register trademarks in foreign countries, for
+            which it actively cooperates with foreign patent attorneys and
+            patent companies. <br />
+            <br />
+            Geo-Pat Ltd systematically provides services in the field of
+            intellectual property to many companies, including pharmaceutical
+            companies.
+          </p>
+        </div>
+
         <div class="rigth">
           <div class="img__box">
             <img src="./imgs/contract.jpg" alt="" />
@@ -128,6 +247,20 @@
           </li>
         </ul>
 
+        <ul class="footer_list-eng" style="display: none">
+          <li class="footer_item">
+            <a href="./aboutUs.html" class="footer_link">about us</a>
+          </li>
+          <li class="footer_item">
+            <a href="./team.html" class="footer_link">our team</a>
+          </li>
+          <li class="footer_item">
+            <a href="./services.html" class="footer_link">services</a>
+          </li>
+          <li class="footer_item">
+            <a href="./contact.html" class="footer_link">contact</a>
+          </li>
+        </ul>
         <div class="footer__social">
           <a href="#"><i class="bx bxl-facebook-square"></i></a>
           <a href="#"><i class="bx bxl-linkedin-square"></i></a>
@@ -137,6 +270,17 @@
       <p>&copy; Geo-pat. All rights reserved.</p>
     </footer>
 
-    <script src="/script.js"></script>
+    
+    <div class="bx-x" style="display: none">
+      <div class="contact"></div>
+      <div class="contact-eng"></div>
+      <div class="team"></div>
+      <div class="team-eng"></div>
+      <div class="content-geo"></div>
+      <div class="content-eng"></div>
+    </div>
+
+    <script src="./script/script.js"></script>
+    <script src="./script/lang.js"></script>
   </body>
 </html>

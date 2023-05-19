@@ -16,6 +16,9 @@ const tabsContent = document.querySelectorAll(".services__content");
 
 const faqItems = document.querySelectorAll(".faq__accordion-item");
 
+const contentGeo = document.querySelector('.content-geo');
+const contentEng = document.querySelector('.content-eng');
+
 //listeners
 
 // change header background color while scrolling
@@ -34,6 +37,8 @@ menu.addEventListener("click", () => {
   test.classList.toggle("burger");
   main.classList.toggle("index");
   contact.classList.toggle("none");
+  contentGeo.classList.toggle("index");
+  contentEng.classList.toggle("index");
   document.querySelector("body").classList.toggle("buger__menu-height");
 });
 
@@ -75,3 +80,4 @@ xbtn.addEventListener("click", function () {
   teamModal.style.visibility = "hidden";
   teamBackdrop.style.visibility = "hidden";
 });
+
