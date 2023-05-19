@@ -1140,6 +1140,7 @@ button[type="submit"]:hover {
   .team__card {
     width: 40rem;
     height: 22rem;
+  
   }
   .roini {
     width: 25rem;
@@ -1403,6 +1404,11 @@ button[type="submit"]:hover {
     font-size: 2rem;
   }
 
+  .team__div {
+     margin: auto;
+    }
+  }
+
   .link__header,
   .link__header-eng {
     font-size: 2.4rem;
@@ -1448,6 +1454,7 @@ button[type="submit"]:hover {
 
   .team,
   .team-eng {
+  
     margin: 5rem 2.5rem 5rem 2.5rem;
   }
   .team__header {
