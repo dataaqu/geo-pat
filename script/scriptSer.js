@@ -4,7 +4,9 @@ const menu = document.querySelector(".menu");
 const test = document.querySelector(".second");
 const btns = document.querySelectorAll(".btns");
 const main = document.querySelector(".main");
+const mainEng = document.querySelector(".main-eng");
 const modal = document.querySelectorAll(".modal__box");
+
 const backdrop = document.querySelectorAll(".backdrop");
 const serviceCard = document.querySelectorAll(".service__card");
 const xbtn = document.querySelectorAll(".bx-x");
@@ -32,9 +34,10 @@ menu.addEventListener("click", () => {
   menu.classList.remove("no-animation");
   test.classList.toggle("burger");
   main.classList.toggle("index");
+  mainEng.classList.toggle("index");
   document.querySelector("body").classList.toggle("buger__menu-height");
-  modal.style.visibility = "hidden";
-  backdrop.style.visibility = "hidden";
+  modal.forEach((el) => (el.style.visibility = "hidden"));
+  backdrop.forEach((el) => (el.style.visibility = "hidden"));
 });
 
 // faq functionality
@@ -79,13 +82,13 @@ serviceCard.forEach((btn) =>
       .querySelectorAll(".modal__desc")
       .forEach((el) => (el.textContent = text));
 
-    backdrop.forEach(el => el.style.visibility = "visible")
+    backdrop.forEach((el) => (el.style.visibility = "visible"));
   })
 );
 
 xbtn.forEach((btn) =>
   btn.addEventListener("click", function () {
     modal.forEach((el) => (el.style.visibility = "hidden"));
-    backdrop.forEach(el => el.style.visibility = "hidden")
+    backdrop.forEach((el) => (el.style.visibility = "hidden"));
   })
 );

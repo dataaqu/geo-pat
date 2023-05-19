@@ -28,7 +28,7 @@ const indexEng = document.querySelector('.content-eng');
 
 function changeLanguage(lang) {
   localStorage.setItem("language", lang);
-  location.reload(); // Reload the page to reflect the language change
+  location.reload(); 
 }
 
 // Get the stored language preference from local storage

@@ -5,6 +5,7 @@ const test = document.querySelector(".second");
 const btns = document.querySelectorAll(".btns");
 const main = document.querySelector(".main");
 
+
 const backdrop = document.querySelector(".backdrop");
 const serviceCard = document.querySelectorAll(".service__card");
 const xbtn = document.querySelector(".bx-x");

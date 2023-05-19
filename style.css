@@ -944,6 +944,7 @@ button[type="submit"]:hover {
 
 .card__decription {
   display: none;
+  
 }
 
 .service__card:active {
@@ -963,15 +964,16 @@ button[type="submit"]:hover {
 }
 
 .modal__box {
-  width: 80%;
+  width: 100%;
   background-color: var(--light);
   position: fixed;
   left: 50%;
   top: 50%;
-  transform: translate(-50%, -40%);
+  transform: translate(-50%, -30%);
   visibility: hidden;
   z-index: 10;
   border-radius: 1.5rem;
+  border: 1px solid red;
 }
 
 .modal__box i {
