@@ -722,9 +722,9 @@ a:active {
 }
 
 .roini {
-  width: 18rem;
+  width: 20rem;
   height: 23rem;
-  left: 20%;
+  left: 18%;
 }
 
 .dato {
@@ -1465,7 +1465,7 @@ button[type="submit"]:hover {
   }
 
   .roini {
-    width: 30rem;
+    width: 32rem;
     height: 32rem;
     left: 20%;
   }
