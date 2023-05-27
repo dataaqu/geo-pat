@@ -1,8 +1,5 @@
-
-  @import url('https://fonts.googleapis.com/css2?family=Mulish:wght@500;700;900&display=swap');
-  @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian:wght@500;700;900&display=swap');
-
-
+@import url("https://fonts.googleapis.com/css2?family=Mulish:wght@500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian:wght@500;700;900&display=swap");
 
 :root {
   --dark: #0b1320;
@@ -50,7 +47,7 @@ html {
 }
 
 body {
-  font-family: 'Mulish', 'Noto Sans Georgian',sans-serif;
+  font-family: "Mulish", "Noto Sans Georgian", sans-serif;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -112,9 +109,8 @@ a:active {
   color: var(--light);
   transition: all 0.4s;
   list-style: none;
- 
-  text-transform: uppercase;
 
+  text-transform: uppercase;
 }
 
 .header__link:hover {
@@ -124,8 +120,6 @@ a:active {
 .header__item:active {
   transform: translateY(1px);
 }
-
-
 
 /* .translate {
   font-size: 2.5rem;
@@ -733,6 +727,12 @@ a:active {
   left: 20%;
 }
 
+.dato {
+  width: 25rem;
+  height: 23rem;
+  left: 8%;
+}
+
 .modal-backdrop {
   position: fixed;
   top: 0;
@@ -780,7 +780,7 @@ a:active {
 }
 
 .divider {
-  height: 90vh;
+  height: 20vh;
 }
 
 .contact,
@@ -788,10 +788,10 @@ a:active {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   position: absolute;
   top: 40%;
   max-width: 70rem;
-
 }
 
 #message {
@@ -801,18 +801,10 @@ a:active {
   display: none;
 }
 
-.contact__input {
-  width: 80%;
-  background-color: #fef9e6;
-  border-bottom-right-radius: 1rem;
-  border-bottom-left-radius: 1rem; 
-}
-
 .contact__info {
   width: 80%;
   background-color: #192333;
-  border-top-right-radius: 1rem;
-  border-top-left-radius: 1rem;
+  border-radius: 1rem;
 }
 
 .info__content {
@@ -945,7 +937,6 @@ button[type="submit"]:hover {
 
 .card__decription {
   display: none;
-  
 }
 
 .service__card:active {
@@ -1141,19 +1132,23 @@ button[type="submit"]:hover {
   .team__card {
     width: 40rem;
     height: 22rem;
-  
   }
 
   .team__img {
     width: 90%;
     left: 5%;
-
   }
-  
+
   .roini {
     width: 25rem;
     height: 28rem;
     left: 20%;
+  }
+
+  .dato {
+    width: 30rem;
+    height: 28rem;
+    left: 12%;
   }
 
   .faq__content {
@@ -1195,11 +1190,8 @@ button[type="submit"]:hover {
   }
 }
 
-
 @media screen and (min-width: 867px) {
-
   .header__list {
-
     gap: 1.5rem;
   }
 
@@ -1207,7 +1199,6 @@ button[type="submit"]:hover {
     font-size: 2.2rem;
   }
 }
-
 
 /* big tablet */
 @media screen and (min-width: 992px) {
@@ -1282,28 +1273,18 @@ button[type="submit"]:hover {
     top: 50%;
     max-width: 80%;
     width: 80rem;
-    margin-bottom: 10rem;
+
   }
 
   .divider {
-    height: 45vh;
-  }
-
-  .contact__input {
-    width: 80%;
-    height: 45rem;
-    background-color: #fef9e6;
-    border-top-right-radius: 1rem;
-    border-bottom-right-radius: 1rem;
-    border-bottom-left-radius: 0;
+    height: 25vh;
   }
 
   .contact__info {
-    width: 80%;
-    height: 45rem;
+
+    height: 40rem;
     background-color: #192333;
-    border-top-right-radius: 0;
-    border-bottom-left-radius: 1rem;
+    border-radius: 1rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -1459,7 +1440,6 @@ button[type="submit"]:hover {
 
   .team,
   .team-eng {
-  
     margin: 5rem 2.5rem 5rem 2.5rem;
   }
 
@@ -1467,7 +1447,6 @@ button[type="submit"]:hover {
     width: 90%;
     height: 40rem;
     position: absolute;
- 
   }
   .team__header {
     font-size: 3.5rem;
@@ -1487,6 +1466,12 @@ button[type="submit"]:hover {
     width: 30rem;
     height: 32rem;
     left: 20%;
+  }
+
+  .dato {
+    width: 37rem;
+    height: 31rem;
+    left: 12%;
   }
 
   .card__name {
