@@ -5,20 +5,19 @@ const test = document.querySelector(".second");
 const btns = document.querySelectorAll(".btns");
 const main = document.querySelector(".main");
 
-
 const backdrop = document.querySelector(".backdrop");
 const serviceCard = document.querySelectorAll(".service__card");
 const xbtn = document.querySelector(".bx-x");
 const contact = document.querySelector(".contact");
 
 const tabs = document.querySelectorAll(".services__tab");
-const tabsContainer = document.querySelector(".services__tab-container");
+const tabsContainer = document.querySelectorAll(".services__tab-container");
 const tabsContent = document.querySelectorAll(".services__content");
 
 const faqItems = document.querySelectorAll(".faq__accordion-item");
 
-const contentGeo = document.querySelector('.content-geo');
-const contentEng = document.querySelector('.content-eng');
+const contentGeo = document.querySelector(".content-geo");
+const contentEng = document.querySelector(".content-eng");
 
 //listeners
 
@@ -44,10 +43,10 @@ menu.addEventListener("click", () => {
 });
 
 //services section  main
-if (tabsContainer) {
-  tabsContainer.addEventListener("click", function (e) {
-    const clicked = e.target.closest(".services__tab");
 
+tabsContainer.forEach((t) =>
+  t.addEventListener("click", function (e) {
+    const clicked = e.target.closest(".services__tab");
     if (!clicked) return;
 
     tabs.forEach((t) => t.classList.remove("services__tab--active"));
@@ -58,8 +57,28 @@ if (tabsContainer) {
     document
       .querySelector(`.services__content--${clicked.dataset.tab}`)
       .classList.add("services__content--active");
-  });
-}
+
+    document
+      .querySelector(`.services__content--${clicked.dataset.tab}-eng`)
+      .classList.add("services__content--active");
+  })
+);
+
+//   tabsContainer.addEventListener("click", function (e) {
+//     const clicked = e.target.closest(".services__tab");
+
+//     if (!clicked) return;
+
+//     tabs.forEach((t) => t.classList.remove("services__tab--active"));
+//     tabsContent.forEach((c) => c.classList.remove("services__content--active"));
+
+//     clicked.classList.add("services__tab--active");
+
+//     document
+//       .querySelector(`.services__content--${clicked.dataset.tab}`)
+//       .classList.add("services__content--active");
+//   });
+// }
 
 // our team functionality
 
@@ -81,4 +100,3 @@ xbtn.addEventListener("click", function () {
   teamModal.style.visibility = "hidden";
   teamBackdrop.style.visibility = "hidden";
 });
-
