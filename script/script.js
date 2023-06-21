@@ -90,7 +90,7 @@ teamCard.forEach((btn) =>
   btn.addEventListener("click", function () {
     teamModal.style.visibility = "visible";
     teamBackdrop.style.visibility = "visible";
-    document.querySelector("body").style.overflowY = 'hidden';
+    document.querySelector("body").classList.add('overflowY')
 
     let text = this.querySelector(".decription").textContent;
     document.querySelector(".modal__description").textContent = text;
@@ -100,4 +100,5 @@ teamCard.forEach((btn) =>
 xbtn.addEventListener("click", function () {
   teamModal.style.visibility = "hidden";
   teamBackdrop.style.visibility = "hidden";
+  document.querySelector("body").classList.remove('overflowY')
 });

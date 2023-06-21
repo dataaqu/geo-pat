@@ -994,7 +994,9 @@ button[type="submit"]:hover {
   pointer-events: none;
   margin-bottom: 1.5rem;
 }
-
+.overflowY {
+  overflow-y: hidden;
+}
 .modal__box {
   width: 100%;
   background-color: var(--light);

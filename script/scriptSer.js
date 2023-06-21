@@ -75,7 +75,7 @@ serviceCard.forEach((btn) =>
     let header = this.querySelector(".card__title").textContent;
     let text = this.querySelector(".card__decription").textContent;
     modal.forEach((el) => (el.style.visibility = "visible"));
-    document.querySelector("body").style.overflowY = "hidden";
+    document.querySelector("body").classList.add('overflowY')
     document
       .querySelectorAll(".modal__text")
       .forEach((el) => (el.textContent = header));
@@ -91,5 +91,6 @@ xbtn.forEach((btn) =>
   btn.addEventListener("click", function () {
     modal.forEach((el) => (el.style.visibility = "hidden"));
     backdrop.forEach((el) => (el.style.visibility = "hidden"));
+    document.querySelector("body").classList.remove('overflowY')
   })
 );
