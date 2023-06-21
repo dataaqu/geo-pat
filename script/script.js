@@ -35,10 +35,10 @@ menu.addEventListener("click", () => {
   menu.classList.toggle("active");
   menu.classList.remove("no-animation");
   test.classList.toggle("burger");
-  main.classList.toggle("index");
-  contact.classList.toggle("none");
-  contentGeo.classList.toggle("index");
-  contentEng.classList.toggle("index");
+  main.classList.add("index");
+  // contact.classList.toggle("none");
+  // contentGeo.classList.toggle("index");
+  // contentEng.classList.toggle("index");
   document.querySelector("body").classList.toggle("buger__menu-height");
 });
 
@@ -90,6 +90,7 @@ teamCard.forEach((btn) =>
   btn.addEventListener("click", function () {
     teamModal.style.visibility = "visible";
     teamBackdrop.style.visibility = "visible";
+    document.querySelector("body").style.overflowY = 'hidden';
 
     let text = this.querySelector(".decription").textContent;
     document.querySelector(".modal__description").textContent = text;

@@ -33,8 +33,8 @@ menu.addEventListener("click", () => {
   menu.classList.toggle("active");
   menu.classList.remove("no-animation");
   test.classList.toggle("burger");
-  main.classList.toggle("index");
-  mainEng.classList.toggle("index");
+  // main.classList.toggle("index");
+  // mainEng.classList.toggle("index");
   document.querySelector("body").classList.toggle("buger__menu-height");
   modal.forEach((el) => (el.style.visibility = "hidden"));
   backdrop.forEach((el) => (el.style.visibility = "hidden"));
@@ -75,6 +75,7 @@ serviceCard.forEach((btn) =>
     let header = this.querySelector(".card__title").textContent;
     let text = this.querySelector(".card__decription").textContent;
     modal.forEach((el) => (el.style.visibility = "visible"));
+    document.querySelector("body").style.overflowY = "hidden";
     document
       .querySelectorAll(".modal__text")
       .forEach((el) => (el.textContent = header));
