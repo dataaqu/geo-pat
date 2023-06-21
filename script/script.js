@@ -88,10 +88,9 @@ const teamBackdrop = document.querySelector(".modal-backdrop");
 
 teamCard.forEach((btn) =>
   btn.addEventListener("click", function () {
-    document.querySelector("body").classList.add('overflowY')
+    document.querySelector("body").style.overflowY = "hidden";
     teamModal.style.visibility = "visible";
     teamBackdrop.style.visibility = "visible";
-
 
     let text = this.querySelector(".decription").textContent;
     document.querySelector(".modal__description").textContent = text;
@@ -101,5 +100,5 @@ teamCard.forEach((btn) =>
 xbtn.addEventListener("click", function () {
   teamModal.style.visibility = "hidden";
   teamBackdrop.style.visibility = "hidden";
-  document.querySelector("body").classList.remove('overflowY')
+  document.querySelector("body").style.overflowY = "visible";
 });
