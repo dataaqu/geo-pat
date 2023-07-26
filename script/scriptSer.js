@@ -73,7 +73,9 @@ const toggleItem = (item) => {
 serviceCard.forEach((btn) =>
   btn.addEventListener("click", function (e) {
     let header = this.querySelector(".card__title").textContent;
-    let text = this.querySelector(".card__decription").textContent;
+    let text = this.querySelector(".card__decription").innerHTML;
+    let formattedDescription = text.replace(/&lt;br&gt;/g, "\n");
+   
     modal.forEach((el) => (el.style.visibility = "visible"));
     document.querySelector("body").style.overflowY = "hidden";
     document
@@ -81,8 +83,9 @@ serviceCard.forEach((btn) =>
       .forEach((el) => (el.textContent = header));
     document
       .querySelectorAll(".modal__desc")
-      .forEach((el) => (el.textContent = text));
-
+      .forEach((el) => (el.innerText = formattedDescription));
+      console.log(formattedDescription);
+     
     backdrop.forEach((el) => (el.style.visibility = "visible"));
   })
 );
