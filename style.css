@@ -764,16 +764,17 @@ a:active {
   left: 12%;
 }
 
+
 .dato {
   width: 22rem;
-  height: 23rem;
-  left: 10%;
+  height: 24rem;
+  left: 14%;
 }
 
 .zaza {
-  width: 22rem;
-  height: 25rem;
-  left: 12%;
+  width: 20rem;
+  height: 21rem;
+  left: 14%;
 }
 
 .modal-backdrop {
@@ -790,12 +791,15 @@ a:active {
   position: fixed;
   top: 50%;
   left: 50%;
-  width: 80%;
+  width: 100%;
+  
+  max-height: 50rem;
   transform: translate(-50%, -30%);
   background-color: #fff;
   padding: 4rem;
   border-radius: 1.5rem;
   visibility: hidden;
+  overflow-y: auto;
 }
 
 .modal .bx-x {
@@ -809,6 +813,7 @@ a:active {
 .modal__description {
   font-size: 1.5rem;
   line-height: 2rem;
+ 
 }
 
 /* contact page */
@@ -1213,13 +1218,13 @@ button[type="submit"]:hover {
 
   .dato {
     width: 26rem;
-    height: 28rem;
+    height: 31rem;
     left: 18%;
   }
 
   .zaza {
-    width: 26rem;
-    height: 31rem;
+    width: 24rem;
+    height: 26rem;
     left: 18%;
   }
 
@@ -1546,14 +1551,18 @@ button[type="submit"]:hover {
 
   .dato {
     width: 60%;
-    height: 34rem;
+    height: 37rem;
     left: 18%;
+  }
+  .nugzari {
+    width: 80%;
+    left: 10%;
   }
 
   .zaza {
-    width: 60%;
-    height: 37rem;
-    left: 18%;
+    width: 50%;
+    height: 30.5rem;
+    left: 24%;
   }
 
   .card__name {
